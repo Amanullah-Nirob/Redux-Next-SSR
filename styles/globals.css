@@ -1,0 +1,104 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,
+:active {
+    outline: none;
+}
+a:focus,
+a:active {
+    outline: none;
+}
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+input::-ms-clear {
+    display: none;
+}
+button {
+    cursor: pointer;
+}
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+a,
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/*--------------------*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#__next{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    font-size: 14px;
+    background-color:  #000;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+
+@layer components{
+    .navItem{
+        @apply flex px-5 items-center gap-2 text-gray-500 hover:text-white transition-colors text-[16px]
+    }
+    .blackBtn{
+        @apply flex items-center text-lg gap-2 border rounded-full border-white self-start bg-black text-white hover:text-black hover:bg-white transition-colors cursor-pointer justify-center h-8
+    }
+}
